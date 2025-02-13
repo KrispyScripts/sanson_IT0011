@@ -1,7 +1,7 @@
 def is_palindrome(num):
     return str(num) == str(num)[::-1]
 
-with open("numbers.txt") as file:
+with open("Technical Midterm Exam/numbers.txt") as file:
     for i, line in enumerate(file, 1):
         numbers = [int(x) for x in line.replace(',', ' ').split()]
         total = sum(numbers)
