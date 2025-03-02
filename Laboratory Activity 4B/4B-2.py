@@ -1,27 +1,16 @@
 import csv
 
-def load_rates(file):
+if __name__ == "__main__":
+    file = 'Laboratory Activity 4B/currency.csv'
     rates = {}
     with open(file, 'r') as f:
         reader = csv.DictReader(f)
-        for row in reader:
-            rates[row['code']] = float(row['rate'])
-    return rates
-
-def convert(usd, curr, rates):
-    return usd * rates[curr]
-
-def main():
-    file = 'Laboratory Activity 4B/currency.csv'
-    rates = load_rates(file)
+        rates = {row['code']: float(row['rate']) for row in reader}
     
     usd = float(input("How much dollar do you have? "))
     curr = input("What currency you want to have? ").upper()
     
-    result = convert(usd, curr, rates)
+    result = usd * rates[curr]
     
     print(f"Dollar: {usd} USD")
     print(f"{curr}: {result}")
-
-if __name__ == "__main__":
-    main()
