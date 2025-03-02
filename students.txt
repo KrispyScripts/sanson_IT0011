@@ -1,5 +1,0 @@
-Last Name: Sanson
-First Name: Karl
-Age: 12
-Contact Number: 09012345
-Course: BSIT-CST
